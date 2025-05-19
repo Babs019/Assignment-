@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+<body>
+    <script>
+        console.log("=== Section A: JavaScript Array Methods ===");
+
+        // 1. push() and pop()
+           
+           let fruits = ["Apple", "Banana", "Mango", "Orange"];
+           fruits.push("Pawpaw");
+           console.log("After push:", fruits); 
+
+           fruits.pop();
+           console.log("After pop:", fruits); 
+
+        // 2. filter() to extract even numbers from 1 to 20
+            // filter() method create a new array with all element that pass the test implemented by the provided functions.
+           
+           let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                        11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+           let evenNumbers = numbers.filter(num => num% 2 === 0);
+           console.log("Even numbers from 1 to 20:", evenNumbers);
+
+        // 3. find() method 
+            // find() method returns the value of the first element that passes a test. If no value passes the test, undefined is returned. 
+
+           let students = [
+            {name: "Babatunde", score: 85},
+            {name: "Bob", score: 65},
+            {name: "Babs", score: 70}
+           ];
+
+           let topStudent = students.find(student => student.score > 80);
+           console.log("Top student found using find():", topStudent);
+
+        
+
+
+        console.log("\n=== Section B: JavaScript Conditions ===");
+
+        // 1. if, else if, else
+            
+            let age = 25;
+            if (age < 13) {
+            console.log("Child");
+            } else if (age < 20) {
+            console.log("Teenager");
+            } else {
+            console.log("Adult");
+            }
+
+        // 2. Check if a number is positive, negative, or zero
+
+            let num = 10;
+            if (num > 0) {
+            console.log("Positive number");
+            } else if (num < 0) {
+            console.log("Negative number");
+            } else {
+            console.log("Zero");
+            }
+
+        // 3. switch statement - days of the week
+        
+         // What is a switch statement?
+         // A switch statement is a control statement that allows you to execute different blocks of code based on the value of an expression.
+         // It is often used as an alternative to multiple if-else statements when you have many conditions to check.
+            
+            // Example:
+
+            let day = "Monday";
+            switch (day) {
+            case "Monday":
+                console.log("Start of the week.");
+                break;
+            case "Tuesday":
+                console.log("Second day of the week.");
+                break;
+            case "Wednesday":
+                console.log("Midweek.");
+                break;
+            case "Thursday":
+                console.log("Almost weekend.");
+                break;
+            case "Friday":
+                console.log("End of the work week.");
+                break;
+            case "Saturday":
+                console.log("Weekend!");
+                break;
+            case "Sunday":
+                console.log("Rest day.");
+                break;
+            default:
+                console.log("Invalid day.");
+        }
+
+        // 4. Comparison operators
+           // Comparison operator are used to compare two values. The result of the comparison is a Boolean value(true or false).
+
+            console.log("5 == '5':", 5 == '5');      
+            console.log("5 === '5':", 5 === '5');    
+            console.log("5 != '5':", 5 != '5');      
+            console.log("5 !== '5':", 5 !== '5');    
+            console.log("7 > 3:", 7 > 3);            
+            console.log("2 < 1:", 2 < 1);        
+
+        // 5. Check if student passed or failed
+
+            let score = 65;
+            if (score >= 50) {
+            console.log("Student passed");
+            } else {
+            console.log("Student failed");
+            }
+
+        console.log("\n=== Section C: JavaScript Functions ===");
+
+        // 1. What is a function?
+        // A function is a block of code that perform a specific task. It can take inputs (parameters) and return an output.
+        //  Example:
+
+            function sayHello() {
+            console.log("Hello from a function!");
+            }
+            sayHello();
+
+        // 2. greetUser function
+
+            function greetUser(name) {
+            console.log("Hello, " + name + " Welcome.");
+            }
+            greetUser("Babatunde");
+
+        // 3. Function to return product of two numbers
+
+            function multiply (a, b) {
+            return a * b;
+            }
+            console.log("Product of 4 and 5:", multiply(4, 5));
+    </script>
+</body>
+</html>
